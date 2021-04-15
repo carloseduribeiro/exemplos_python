@@ -1,0 +1,14 @@
+1;Amoxicilina - Capsulas (250mg);2028-05-25;100
+2;Amoxicilina - Capsulas (500mg);2024-12-25;96
+3;Amoxicilina - Suspensao oral, extemporanea: 5% (tri-hidrato) 250mg;2026-04-25;100
+4;Clonazepam - Comprimidos (0.5mg);2026-12-31;123
+5;Clonazepam - Comprimidos (2mg);2026-12-31;58
+6;Clonazepam - Solucao oral 2,5 mg/ml;2026-12-31;58
+7;Codeina - Comprimido 30mg;2023-06-15;25
+8;Codeina - Xarope 2.22mg/ml - Frasco 90ml;2024-11-07;18
+9;Paracetamol - Comprimidos 100mg;2028-09-26;89
+10;Paracetamol - Comprimidos 500mg;2028-10-06;145
+11;Paracetamol - Comprimidos 300mg;2028-11-27;130
+12;Paracetamol - Comprimidos efervescentes 1000mg;2024-01-05;86
+13;Ibuprofeno - Comprimidos 200mg;2024-04-11;128
+14;Ibuprofeno - Comprimidos 400mg;2025-08-28;256
