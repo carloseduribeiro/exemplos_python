@@ -56,6 +56,8 @@ class Farmaceutico:
         if not self.verificar_estoque():
             return False
 
+        medicamento_entregue = False
+
         dados_modificados = []
         with open("../dados/estoque.txt") as estoque:
             for line in estoque:
@@ -65,33 +67,17 @@ class Farmaceutico:
                     quantidade = int(medicamento[3].strip())
                     # Subtrai a quantidade escrita na receita do estoque:
                     medicamento[3] = str(quantidade - self.receita.quantidade) + '\n'
+                    medicamento_entregue = True
+                    self.receita.definir_como_entregue(self)
                 dados_modificados.append(';'.join(medicamento))
 
         with open("../dados/estoque.txt", "w") as estoque:
             estoque.writelines(dados_modificados)
 
+        return medicamento_entregue
+
     def entregar_medicamento(self):
-        pass
-
-# far = Farmaceutico("Carlos")
-# pacreceita = Paciente("João", "1234", 18)
-# paccliente = Paciente("João", "1234", 18)
-#
-#
-# informacoes_receita = {
-#     "medicamento":  "Paracetamol - Comprimidos 500mg",
-#     "validade":     "14/04/2021",
-#     "quantidade":   10,
-#     "paciente":     pacreceita
-# }
-#
-# receita = Receita(informacoes_receita)
-#
-# far.receber_receita(receita, paccliente)
-# print(far.verificar_estoque())
-
-# print(far.retirar_medicamento())
-#
-# with open("../dados/estoque.txt") as estoque:
-#     for line in estoque:
-#         print(line, end='')
+        if self.receita.medicamento_entregue():
+            print("Medicamento entregue!")
+        else:
+            print("medicamento não entregue!")
